@@ -1,0 +1,5 @@
+venv/
+val/
+train/
+*.ipynb
+.git

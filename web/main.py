@@ -3,6 +3,7 @@ import requests
 import base64
 from PIL import Image
 from io import BytesIO
+from pathlib import Path
 
 
 def get_base64(bin_file):
@@ -40,7 +41,8 @@ def create_image_border(img):
     st.markdown(image_html, unsafe_allow_html=True)
 
 
-set_background("./tomato_field.png")
+TOMATO_BG = Path(__file__).parent / "tomato_field.png"
+set_background(str(TOMATO_BG))
 
 # Render the HTML and CSS using Streamlit
 
@@ -67,11 +69,13 @@ st.markdown(custom_css, unsafe_allow_html=True)
 
 st.title("Tomato Leaf Disease Predictor")
 # st.write("Upload an image of a tomato leaf here")
-st.markdown('<p style="color: black; font-size: 20px">Upload an image of a tomato leaf here to predict its disease.</p>', unsafe_allow_html=True) 
-
-
-uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"]
+st.markdown(
+    '<p style="color: black; font-size: 20px">Upload an image of a tomato leaf here to predict its disease.</p>',
+    unsafe_allow_html=True,
 )
+
+
+uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     # Display the uploaded image
@@ -103,6 +107,6 @@ if uploaded_file:
 
                 # Display the formatted content within st.success
                 st.markdown(html_content, unsafe_allow_html=True)
-                
+
             else:
                 st.error("Error occurred while predicting.")
