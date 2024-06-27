@@ -22,9 +22,10 @@ Tomato Doctor is an AI-driven application designed to assist gardeners, farmers,
 
 Here is a demonstration of Tomato Doctor in action:
 
-<!-- [![Tomato Doctor Demo](https://youtu.be/mgK7v0i_HpI)](https://youtu.be/mgK7v0i_HpI) -->
+[![Tomato Doctor Demo](https://img.youtube.com/vi/mgK7v0i_HpI/0.jpg)](https://www.youtube.com/watch?v=mgK7v0i_HpI)
 
-[![Tomato Doctor Demo](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+<!-- [![Tomato Doctor Demo](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ) -->
 
 ## Features
 
@@ -92,14 +93,3 @@ The response will be a JSON object containing the predicted disease and the conf
 
 Tomato Doctor is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for more details.
 
-
-<!-- 
-### running the api
-
-execute
-
-```
-python -m src.api.api
-```
-
-from project root -->
